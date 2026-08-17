@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig Latin Translator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Header strip: title + LCARS-inspired accent bar (pure CSS, no images) -->
+  <header class="lcars-header">
+    <div class="lcars-bar lcars-bar--orange" aria-hidden="true"></div>
+    <div class="lcars-title-block">
+      <h1>Pig Latin Translator</h1>
+      <p class="lcars-subtitle">ranslate-tay ext-tay instantly-way</p>
+    </div>
+    <div class="lcars-bar lcars-bar--blue" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- 2. Input textarea -->
+    <textarea
+      id="input"
+      class="input-area"
+      placeholder="Type here&hellip;"
+      aria-label="Text to translate to Pig Latin"
+      spellcheck="false"
+      autocomplete="off"
+      autocapitalize="off"
+    ></textarea>
+
+    <!-- 3. Output div: live-rendered translation, built from per-word spans -->
+    <div id="output" class="output-area" aria-live="polite" aria-label="Pig Latin translation"></div>
+
+    <!-- 4. Flagged-language banner: conditionally visible -->
+    <div id="banner" class="flag-banner" role="status" hidden>&#9888; This text contains flagged language (see highlighted word below).</div>
+
+  </main>
+
+  <!-- 5. Footer -->
+  <footer class="app-footer">
+    <p>dependency-free demo &mdash; startrekagents bridge crew</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
